@@ -53,6 +53,8 @@ class MailboxViewController: UIViewController {
         archiveIconView.alpha = 0
         listIconView.alpha = 0
         deleteIconView.alpha = 0
+        laterView.alpha = 0
+        archiveView.alpha = 0
         
         iconOffset = 40
         
@@ -260,9 +262,7 @@ class MailboxViewController: UIViewController {
         }
         alertController.addAction(keepDraftAction)
         
-
         self.presentViewController(alertController, animated: true, completion: nil)
-        
     }
 
     @IBAction func didCompose(sender: AnyObject) {
@@ -273,24 +273,30 @@ class MailboxViewController: UIViewController {
     @IBAction func goToMailbox(sender: AnyObject) {
         laterView.frame.origin.x = 320
         archiveView.frame.origin.x = -320
+        laterView.alpha = 0
+        archiveView.alpha = 0
     }
     
     @IBAction func goToArchive(sender: AnyObject) {
+        archiveView.alpha = 1
+        laterView.alpha = 0
         archiveView.frame.origin.x = 0
+        laterView.frame.origin.x = 320
     }
     
     @IBAction func goToLater(sender: AnyObject) {
+        laterView.alpha = 1
+        archiveView.alpha = 0
         laterView.frame.origin.x = 0
         archiveView.frame.origin.x = -320
     }
     
     @IBAction func indexChanged(sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex{
-        case 0: archiveView.frame.origin.x = 0
+        case 0: goToArchive(sender)
         case 1: break;
-        case 2: laterView.frame.origin.x = 0;
-        default:
-            break;
+        case 2: goToLater(sender)
+        default: break;
         }
     }
 

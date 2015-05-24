@@ -141,7 +141,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <view contentMode="scaleToFill" id="IAi-ef-q6f">
+                                    <view alpha="0.0" contentMode="scaleToFill" id="IAi-ef-q6f">
                                         <rect key="frame" x="320" y="-254" width="360" height="1136"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
@@ -172,7 +172,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <view contentMode="scaleToFill" id="BdK-aZ-H6n">
+                                    <view alpha="0.0" contentMode="scaleToFill" id="BdK-aZ-H6n">
                                         <rect key="frame" x="-320" y="-254" width="320" height="1137"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
